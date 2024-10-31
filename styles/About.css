@@ -18,11 +18,13 @@
 }
 
 .about__desc {
+  
   font-size: 1.2rem;
   text-align: left;
 }
 
 .about__contact {
+  color: yellow;
   justify-content: center;
   gap: 1rem;
 }
@@ -32,3 +34,4 @@
     min-height: calc(5rem - var(--about-column-gap));
   }
 }
+

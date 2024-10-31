@@ -1,12 +1,47 @@
 .header {
-  height: var(--header-height);
-  display: flex;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1;
+    width: 50%;                          /* Header genişliği */
+    max-width: 900px;                    /* Maksimum genişlik */
+    height: var(--header-height);        /* Header yüksekliği */
+    display: flex;                       /* Flexbox düzeni */
+    align-items: center;                 /* Dikeyde ortalama */
+    justify-content: space-between;      /* Yatayda dağıtım */
+    position: sticky;                    /* Kaydırıldığında sabit pozisyon */
+    top: 0;                              /* En üstte yapışık */
+    z-index: 1;                          /* Diğer elemanların üstünde */
+    margin: 0 auto;                      /* Ortalamak için */
+    opacity: 1;                          /* Tam görünür */
+    transform: translateY(0px) translateZ(0px); /* Dönüşüm */
+    box-sizing: border-box;              /* Taşmaları önler */
+    padding: 0 20px;                     /* İçeriden boşluk */
+    border-radius: 100%;                 /* Oval görünüm için */
+    
+}
+
+/* Light Tema için Header Stilleri */
+.light .header {
+    background: linear-gradient(to bottom, #afc5cc, #8eaaad); /* Aydınlık temadaki üst kısım rengi */
+    color: #f6f7f8; /* Aydınlık temada yazı rengi */
+     box-shadow: 100px 100px 300px rgba(196, 152, 152, 0.925); /* Gölge efekti */
+}
+
+/* Dark Tema için Header Stilleri */
+.dark .header {
+    background: linear-gradient(to bottom, #23283e, #2a2f4c); /* Karanlık temadaki üst kısım rengi */
+    color: #bdbddd; /* Karanlık temada yazı rengi */
+    box-shadow: 0px 10px 30px rgba(45, 117, 55, 0.7); /* Gölge efekti */
+}
+
+/* Header'daki Linkler için Renk Ayarları */
+.header a {
+    color: inherit; /* Header içindeki bağlantılar için renk */
+    text-decoration: none; /* Altı çizgiyi kaldır */
+}
+
+/* Header'daki Linkler Hover Durumu */
+.header a:hover {
+    color: var(--clr-primary); /* Hover durumunda renk değişimi */
 }
 
 .header.shadow {
-  box-shadow: var(--shadow);
+    box-shadow: var(--shadow); /* Gölge efekti */
 }

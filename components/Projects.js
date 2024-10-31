@@ -10,7 +10,7 @@ const Projects = () => {
       className='section projects animate__animated animate__fadeIn animate__delay-5s'
       id='projects'
     >
-      <h2 className='section__title'>Projects</h2>
+      <h2 className='section__title'>My Projects</h2>
       <div className='projects__column'>
         {projects.map((project) => (
           <ProjectCard key={uniqid()} project={project} />

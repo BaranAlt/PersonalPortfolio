@@ -2,12 +2,75 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem;
+  background: linear-gradient(45deg, rgba(122, 206, 199, 0.568), #d3b460);
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow);
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 .skills__list-item {
-  margin: 0.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--clr-bg-alt);
+  color: var(--clr-fg);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
 }
 
+/* Hover ile Arkaplan Değişimi ve Parlaklık Efekti */
 .skills__list-item:hover {
-  cursor: auto;
+  background: linear-gradient(45deg, #686d5e, #2193b0);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Parlak Çizgi Hover Efekti */
+.skills__list-item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 4px;
+  background-color: #ffeb3b;
+  transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
+}
+
+.skills__list-item:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+/* Dönen 3D Efekti */
+.skills__list-item:hover {
+  animation: rotate3D 0.6s ease-in-out forwards;
+}
+
+@keyframes rotate3D {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+/* Hızlı Renk Geçiş Efekti */
+.skills__list-item:hover {
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4, #5b926e, #2193b0);
+  background-size: 200%;
+  animation: gradientShift 2s infinite alternate;
+}
+
+@keyframes gradientShift {
+  0% { background-position: left; }
+  100% { background-position: right; }
 }

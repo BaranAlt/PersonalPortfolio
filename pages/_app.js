@@ -22,7 +22,6 @@ import { ga_measurement_id, pageview } from '../lib/google-analytics'
 
 function MyApp({ Component, pageProps }) {
   // google analytics
-  // will log page views on route changes if new routes are added
   const router = useRouter()
   useEffect(() => {
     if (!ga_measurement_id) return
@@ -30,13 +29,17 @@ function MyApp({ Component, pageProps }) {
     router.events.on('routeChangeComplete', handleRouteChange)
     return () => router.events.off('routeChangeComplete', handleRouteChange)
   }, [router.events])
-  // /google analytics
 
   return (
     <>
       <Head>
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{about.names.join(' ') || 'Portfolio'}</title>
+
+        {/* Favicon Links */}
+        <link rel="icon" type="image/x-icon" href="/public/images/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/public/images/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/public/images/favicon-16x16.png" />
       </Head>
       <ThemeProvider>
         <Component {...pageProps} />

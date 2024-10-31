@@ -17,6 +17,7 @@ export default function Document() {
           href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap'
           rel='stylesheet'
         />
+        
         {/* Global Site Tag (gtag.js) - Google Analytics */}
         {ga_measurement_id && (
           <>
@@ -38,6 +39,24 @@ gtag('config', '${ga_measurement_id}', {
             />
           </>
         )}
+
+        {/* Chatra Chatbot Script */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(d, w, c) {
+                w.ChatraID = '796Sfi9WgbbQ3dfQu';
+                var s = d.createElement('script');
+                w[c] = w[c] || function() {
+                    (w[c].q = w[c].q || []).push(arguments);
+                };
+                s.async = true;
+                s.src = 'https://call.chatra.io/chatra.js';
+                if (d.head) d.head.appendChild(s);
+              })(document, window, 'Chatra');
+            `,
+          }}
+        />
       </Head>
       <body>
         <Main />

@@ -4,3 +4,26 @@
   flex-direction: column;
   gap: 2rem;
 }
+
+.project {
+  background-color:aliceblue; /* Varsayılan kutu rengi */
+  padding: 1rem; /* Kutu içi boşluk */
+  border-radius: 100px; /* Köşeleri yuvarlamak için */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Renk ve boyut geçişi */
+  color: #003366; /* Yazı rengi (lacivert) */
+}
+
+.project:hover {
+  background-color: #007bff; /* Hover durumundaki renk */
+  transform: scale(1.05); /* Kutu büyümesi */
+}
+
+/* Başlık renk ayarı */
+.project h1, .project h2, .project h3 {
+  color: #003366; /* Başlık rengi (lacivert) */
+}
+
+/* Logo ve stack kısmı için renk ayarı */
+.project .logo, .project .stack {
+  color: #003366; /* Logo ve stack rengi (lacivert) */
+}

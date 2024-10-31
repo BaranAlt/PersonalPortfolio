@@ -3,22 +3,22 @@ const header = {
   // if so, it will be overwritten by your full name, or a default wordmark if the full name is invalid
   wordmark: '',
 }
-
+import NeverEndingBox from '../components/NeverEndingBox'; // Bileşeni içe aktarın
 const about = {
   // each of these properties is optional - they can be left empty or deleted
   // the first element in the `names` array will be treated as your first name, and all the elements combined will be treated as your full name
   // each element in the `description` array will be treated as a separate paragraph
-  names: ['John', 'Doe'],
-  greetingEmoji: '👋',
-  role: 'Software Engineer',
-  company: 'Acme Labs',
+  names: ['Baran', 'Altundas'],
+  greetingEmoji: <NeverEndingBox />, // Animasyonu burada kullanıyoruz
+  role: 'Fullstack Developer',
+  company: '',
   description: [
-    'Adipisicing sit fugit ullam unde aliquid sequi Facilis soluta facilis perspiciatis corporis nulla aspernatur. Autem eligendi rerum delectus modi quisquam? Illo ut quasi nemo ipsa cumque perspiciatis! Maiores minima consectetur.',
+    'I am a passionate fullstack developer dedicated to continuous improvement and writing clean, efficient code. My goal is to contribute valuable skills to myself and to learn as much as I can. I engage in various projects and read documentation and articles to develop both theoretical and practical knowledge. I love to research and learn, and I enjoy sharing what I learn with those around me.',
   ],
-  resume: 'https://example.com',
+  resume: 'https://medium.com/@altundassbaran',
   social: {
-    github: 'https://github.com',
-    linkedin: 'https://linkedin.com',
+    github: 'https://github.com/BaranAlt',
+    linkedin: 'https://www.linkedin.com/in/baran-altunda%C5%9F-8620861b4/',
   },
 }
 
@@ -27,68 +27,65 @@ const projects = [
   // if the array is left empty, the "Projects" section won't render
   // each element in each `description` array will be treated as a separate paragraph
   {
-    thumbnail: 'images/placeholder-image.jpeg',
-    name: 'Project 1',
+    thumbnail: 'images/mionmedikal.png',
+    name: 'Mi-on Medikal Website',
     description: [
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
+      'Mi-On Medical is a platform that offers high-quality and reliable textile products for the textile and healthcare sectors.',
     ],
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://example.com',
+    stack: ['HTML', 'CSS', 'JS','Wordpress'],
+    sourceCode: 'https://github.com/BaranAlt',
+    livePreview: 'https://mi-onmedikaltekstil.com/',
   },
   {
-    thumbnail: 'images/placeholder-image.jpeg',
-    name: 'Project 2',
+    thumbnail: 'images/dmrproje.png',
+    name: 'DMR PROJE VE DANIŞMANLIK',
     description: [
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
+      'DMR Proje, as a company that offers innovative solutions in the construction and engineering field, strengthens its position in the industry with a commitment to quality service.',
     ],
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://example.com',
+    stack: ['HTML', 'CSS', 'JS','Wordpress'],
+    sourceCode: 'https://github.com/BaranAlt',
+    livePreview: 'https://dmrproje.com.tr/',
   },
   {
-    thumbnail: 'images/placeholder-image.jpeg',
-    name: 'Project 3',
+    thumbnail: 'images/comingsoon.png',
+    name: 'Learn English',
     description: [
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
+      'The English learning application allows users to select vocabulary pools from various topics at the beginning. Based on the selected vocabulary pools, users take quizzes to learn new words and reinforce their knowledge. Each quiz presents users with different sentences, and they are expected to select the correct word that matches the meaning of these sentences. ',
     ],
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://example.com',
+    stack: ['React Native', 'NodeJS', 'SQL'],
+    sourceCode: 'https://github.com/BaranAlt',
+    livePreview: '',
   },
   {
-    thumbnail: 'images/placeholder-image.jpeg',
-    name: 'Project 4',
+    thumbnail: 'images/comingsoon.png',
+    name: 'RemindMe',
     description: [
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
+      'This application simplifies task management by helping users plan their daily and weekly tasks. With features like calendar, reminders, and team collaboration, users can effectively manage their projects.',
     ],
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://example.com',
+    stack: ['React Native', 'NodeJS', 'SQL','Firebase Firestore'],
+    sourceCode: 'https://github.com/BaranAlt',
+    livePreview: '',
   },
 ]
 
 const skills = [
-  // skills can be added or removed
-  // if the array is left empty, the "Skills" section won't render
+  
   'HTML',
   'CSS',
+  'C',
+  'Tailwind',
   'JavaScript',
-  'TypeScript',
-  'React',
-  'Redux',
-  'SASS',
-  'Material UI',
+  'SQL',
+  'React Native',
+  'Jira',
+  'GitHub',
   'Git',
-  'CI/CD',
-  'Jest',
-  'Enzyme',
+  'Synthesia AI',
 ]
 
 const contact = {
-  // the `email` property is optional - it can be left empty or deleted
-  // if so, the "Contact" section won't render
-  email: 'johndoe@email.com',
+ 
+  email: 'altundassbaran@gmail.com',
 }
 
 export { header, about, projects, skills, contact }
