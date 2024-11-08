@@ -34,12 +34,11 @@ const Navbar = () => {
   }, [])
 
   return (
-    <nav className='nav container animate__animated animate__fadeIn animate__delay-5s'>
+    <nav className='nav container'>
       <ul
-        className='nav__list'
-        style={{ display: showNavList ? 'flex' : null }}
+        className={`nav__list ${showNavList ? 'nav__list--open' : ''}`}
       >
-        <li className='nav__list-item nav__scroll-top'>
+        <li className='nav__list-item'>
           <strong>
             <a href='#top' onClick={hideNavListOverlay} className='link'>
               {wordmark || names.join(' ') || defaultWordmark}
@@ -92,16 +91,6 @@ const Navbar = () => {
       >
         {showNavList ? <CloseIcon /> : <MenuIcon />}
       </button>
-
-      <div className='nav__scroll-top'>
-        <strong>
-          <a href='#top' onClick={hideNavListOverlay} className='link'>
-            {wordmark ||
-              names.map((name) => name[0]).join('') ||
-              defaultWordmark}
-          </a>
-        </strong>
-      </div>
 
       <button
         type='button'
